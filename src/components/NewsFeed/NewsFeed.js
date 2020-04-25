@@ -4,10 +4,10 @@ import axios from 'axios'
 import Personimage from '../../assets/images/newsFeed.png'
 import classes from './NewsFeed.module.css'
 import Card from '../../hoc/Card/Card'
-import {data} from './Local_response'
+import { data } from './Local_response'
 const NewsFeed = (props) => {
 
-    
+
     const constants = {
         HEADLINE: "stay home, stay safe",
         DESCRIPTION: "we'll keep you updated",
@@ -47,7 +47,7 @@ const NewsFeed = (props) => {
 
     const updateNews = (data) => {
         setnewsArticles((state) => {
-           
+
             const newsContent = { ...data.articles[state.articleid] };
 
             const headline = newsContent.title != null ?

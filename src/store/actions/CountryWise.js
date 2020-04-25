@@ -29,7 +29,7 @@ export const autoUpdateCountriesData = () => {
 
                 })
                 .catch(err => {
-                   
+
                 })
         }, 2 * 60 * 60000)
 
@@ -49,7 +49,7 @@ export const getCountryWiseData = () => {
                 dispatch(autoUpdateCountriesData())
             })
             .catch(err => {
-              
+
             })
     }
 }

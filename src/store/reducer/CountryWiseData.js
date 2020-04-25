@@ -18,14 +18,14 @@ const reducer = (state = initialState, action) => {
 
         case (actionType.SET_COUNTRIES_DETAILS):
 
-          action.CountryData.data.sort(function(a, b) {
-            var keyA = a.cases,
-              keyB = b.cases;
-            if (keyA < keyB) return 1;
-            if (keyA > keyB) return -1;
-            return 0;
-          });
-          
+            action.CountryData.data.sort(function (a, b) {
+                var keyA = a.cases,
+                    keyB = b.cases;
+                if (keyA < keyB) return 1;
+                if (keyA > keyB) return -1;
+                return 0;
+            });
+
             const OnlyRequiredData = action.CountryData.data.map((eachCountry) => {
                 return {
                     TotalAffected: kFormatter(eachCountry.cases),
@@ -36,7 +36,7 @@ const reducer = (state = initialState, action) => {
                 }
             })
 
-            
+
 
 
             const Mapdata = action.CountryData.data.map((eachCountry) => {

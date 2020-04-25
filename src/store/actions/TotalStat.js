@@ -18,7 +18,7 @@ export const autoupdateStat = () => {
         setInterval(() => {
             axios.get('https://corona.lmao.ninja/v2/all')
                 .then(Response => {
-                   
+
                     dispatch(setAllStats(Response));
                 })
         }, 5 * 60000)
@@ -33,7 +33,7 @@ export const getAllStats = () => {
 
         axios.get('https://corona.lmao.ninja/v2/all')
             .then(Response => {
-               
+
                 dispatch(setAllStats(Response));
                 dispatch(autoupdateStat());
             })

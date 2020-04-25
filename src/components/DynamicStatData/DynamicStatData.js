@@ -34,7 +34,6 @@ const DynamicStatData = (props) => {
 
 
     const dispatch = useDispatch();
-
     const getAllStats = useCallback(() => dispatch(actions.getAllStats()), [dispatch]);
 
     useEffect(() => {
@@ -61,7 +60,6 @@ const DynamicStatData = (props) => {
 
                             </div>
                             <div className={classes.Graph}>
-                                {/* <img src={statData["difference"] >= 0 ? graph1 : greenGraph} /> */}
 
                                 <AreaChart width={72} height={60} data={editedData}>
                                     <Tooltip viewBox={{ width: 100, height: 100 }} />
